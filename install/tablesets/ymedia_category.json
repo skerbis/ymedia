@@ -6,18 +6,17 @@
             "name": "translate:ymedia_category_title",
             "description": "",
             "list_amount": 50,
-            "list_sortfield": "id",
+            "list_sortfield": "name",
             "list_sortorder": "ASC",
             "search": 1,
-            "hidden": 1,
-            "export": 0,
-            "import": 0,
+            "hidden": 0,
+            "export": 1,
+            "import": 1,
             "mass_deletion": 0,
             "mass_edit": 0,
             "schema_overwrite": 1,
-            "history": 0,
-            "exclusive_view_roles": "",
-            "exclusive_edit_roles": ""
+            "history": 1,
+            "unique_key": "name, parent_id"
         },
         "fields": [
             {
@@ -34,9 +33,100 @@
                 "default": "",
                 "no_db": "0",
                 "notice": "",
-                "attributes": "",
-                "prepend": "",
-                "append": ""
+                "unique": "1"
+            },
+            {
+                "table_name": "rex_ymedia_category",
+                "prio": 2,
+                "type_id": "value",
+                "type_name": "be_manager_relation",
+                "db_type": "int",
+                "list_hidden": 0,
+                "search": 1,
+                "name": "parent_id",
+                "label": "translate:ymedia_category_parent",
+                "not_required": "1",
+                "table": "rex_ymedia_category",
+                "field": "name",
+                "type": "0",
+                "empty_option": "1"
+            },
+            {
+                "table_name": "rex_ymedia_category",
+                "prio": 3,
+                "type_id": "value",
+                "type_name": "text",
+                "db_type": "text",
+                "list_hidden": 1,
+                "search": 0,
+                "name": "path",
+                "label": "translate:ymedia_category_path",
+                "not_required": "1",
+                "no_db": "0"
+            },
+            {
+                "table_name": "rex_ymedia_category",
+                "prio": 4,
+                "type_id": "value",
+                "type_name": "textarea",
+                "db_type": "text",
+                "list_hidden": 1,
+                "search": 1,
+                "name": "description",
+                "label": "translate:ymedia_category_description",
+                "not_required": "1"
+            },
+            {
+                "table_name": "rex_ymedia_category",
+                "prio": 5,
+                "type_id": "value",
+                "type_name": "datestamp",
+                "db_type": "datetime",
+                "list_hidden": 1,
+                "search": 0,
+                "name": "createdate",
+                "label": "translate:ymedia_category_createdate",
+                "not_required": "1",
+                "only_empty": "1",
+                "format": "Y-m-d H:i:s"
+            },
+            {
+                "table_name": "rex_ymedia_category",
+                "prio": 6,
+                "type_id": "value",
+                "type_name": "datestamp",
+                "db_type": "datetime",
+                "list_hidden": 1,
+                "search": 0,
+                "name": "updatedate",
+                "label": "translate:ymedia_category_updatedate",
+                "not_required": "1",
+                "only_empty": "0",
+                "format": "Y-m-d H:i:s"
+            },
+            {
+                "table_name": "rex_ymedia_category",
+                "prio": 7,
+                "type_id": "value",
+                "type_name": "integer",
+                "db_type": "int",
+                "list_hidden": 1,
+                "search": 0,
+                "name": "createuser",
+                "label": "translate:ymedia_category_createuser",
+                "not_required": "1"
+            },
+            {
+                "table_name": "rex_ymedia_category",
+                "prio": 8,
+                "type_id": "value",
+                "type_name": "integer",
+                "db_type": "int",
+                "list_hidden": 1,
+                "search": 0,
+                "name": "updateuser",
+                "label": "translate:ymedia_category_updateuser",
+                "not_required": "1"
             }
         ]
     }
