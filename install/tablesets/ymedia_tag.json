@@ -6,23 +6,21 @@
             "name": "translate:ymedia_tags_title",
             "description": "",
             "list_amount": 50,
-            "list_sortfield": "id",
+            "list_sortfield": "name",
             "list_sortorder": "ASC",
             "search": 1,
-            "hidden": 1,
-            "export": 0,
-            "import": 0,
+            "hidden": 0,
+            "export": 1,
+            "import": 1,
             "mass_deletion": 0,
-            "mass_edit": 0,
+            "mass_edit": 1,
             "schema_overwrite": 1,
-            "history": 0,
-            "exclusive_view_roles": "",
-            "exclusive_edit_roles": ""
+            "history": 1
         },
         "fields": [
             {
                 "table_name": "rex_ymedia_tag",
-                "prio": 2,
+                "prio": 1,
                 "type_id": "value",
                 "type_name": "text",
                 "db_type": "varchar(191)",
@@ -34,9 +32,83 @@
                 "default": "",
                 "no_db": "0",
                 "notice": "",
-                "attributes": "",
-                "prepend": "",
-                "append": ""
+                "unique": "1"
+            },
+            {
+                "table_name": "rex_ymedia_tag",
+                "prio": 2,
+                "type_id": "value",
+                "type_name": "textarea",
+                "db_type": "text",
+                "list_hidden": 1,
+                "search": 1,
+                "name": "description",
+                "label": "translate:ymedia_tag_description",
+                "not_required": "1"
+            },
+            {
+                "table_name": "rex_ymedia_tag",
+                "prio": 3,
+                "type_id": "value",
+                "type_name": "text",
+                "db_type": "varchar(191)",
+                "list_hidden": 1,
+                "search": 1,
+                "name": "type",
+                "label": "translate:ymedia_tag_type",
+                "not_required": "1"
+            },
+            {
+                "table_name": "rex_ymedia_tag",
+                "prio": 4,
+                "type_id": "value",
+                "type_name": "datestamp",
+                "db_type": "datetime",
+                "list_hidden": 1,
+                "search": 0,
+                "name": "createdate",
+                "label": "translate:ymedia_tag_createdate",
+                "not_required": "1",
+                "only_empty": "1",
+                "format": "Y-m-d H:i:s"
+            },
+            {
+                "table_name": "rex_ymedia_tag",
+                "prio": 5,
+                "type_id": "value",
+                "type_name": "datestamp",
+                "db_type": "datetime",
+                "list_hidden": 1,
+                "search": 0,
+                "name": "updatedate",
+                "label": "translate:ymedia_tag_updatedate",
+                "not_required": "1",
+                "only_empty": "0",
+                "format": "Y-m-d H:i:s"
+            },
+            {
+                "table_name": "rex_ymedia_tag",
+                "prio": 6,
+                "type_id": "value",
+                "type_name": "integer",
+                "db_type": "int",
+                "list_hidden": 1,
+                "search": 0,
+                "name": "createuser",
+                "label": "translate:ymedia_tag_createuser",
+                "not_required": "1"
+            },
+            {
+                "table_name": "rex_ymedia_tag",
+                "prio": 7,
+                "type_id": "value",
+                "type_name": "integer",
+                "db_type": "int",
+                "list_hidden": 1,
+                "search": 0,
+                "name": "updateuser",
+                "label": "translate:ymedia_tag_updateuser",
+                "not_required": "1"
             }
         ]
     }
